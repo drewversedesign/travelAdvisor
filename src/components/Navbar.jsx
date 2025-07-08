@@ -18,7 +18,7 @@ const Navbar = ({ sticky, border }) => {
             <div className={`container mx-auto w-full flex justify-between items-center px-4 py-3 ${ isMenuToggled && 'shadow-md' }`}>
                 {/* Logo */}
                 <Link to={"/"}>
-                    <img src={logo} alt="Traveladvisor" className="w-[180px] sm:w-[200px] md:w-[250px]"/>
+                    <img src={logo} alt="Ann tours and travel" className="w-[180px] sm:w-[200px] md:w-[250px]"/>
                 </Link>
                 {/*  */}
                 
