@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Autocomplete } from "@react-google-maps/api";
 import logo from '../../img/logo.svg';
-
+ 
 const Header = ({setCoordinates}) => {
     const [search, setSearch] = useState(false);
     const [autoComplete, setAutoComplete] = useState(null);
@@ -30,19 +29,17 @@ const Header = ({setCoordinates}) => {
 
                 {/* Search Form - Toggle between Hidden and Visible on Mobile, determined by the 'search' state */}
                 <div className={`relative w-full md:w-auto md:block ${!search && 'hidden'}`}>
-                    {/* AutoComplte enabled Search Input Field */}
-                    <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
-                        <div className="group relative">
-                            <svg className="absolute left-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none group-focus-within:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
-                            <input 
-                                className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-sm py-1 md:py-2 pl-10 ring-1 ring-slate-200" 
-                                type="text" 
-                                placeholder="Search Location..." 
-                            />
-                        </div>
-                    </Autocomplete>
+                    {/* Search Input Field */}
+                    <div className="group relative">
+                        <svg className="absolute left-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none group-focus-within:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <input 
+                            className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-sm py-1 md:py-2 pl-10 ring-1 ring-slate-200" 
+                            type="text" 
+                            placeholder="Search Location..." 
+                        />
+                    </div>
                     {/* --- */}
                 </div>
                 {/* --- */}
